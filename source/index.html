@@ -6,8 +6,8 @@
 	<title>Бородинский</title>
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 	<meta name="description" content="">
-	<link rel="stylesheet" href="css/normalize.css">
-	<link rel="stylesheet" href="css/style.css">
+	<link rel="stylesheet" href="../css/normalize.css">
+	<link rel="stylesheet" href="../css/style.css">
 	<link href="https://fonts.googleapis.com/css?family=PT+Sans+Narrow:400,700&amp;subset=cyrillic" rel="stylesheet">
 </head>
 
@@ -50,52 +50,56 @@
 			</ul>
 		</section>
 
-		<section class="news">
-			<h2>Новости</h2>
-			<ul class="news-list">
-				<li class="news-item">
-					<p>НАМ НАКОНЕЦ ЗАВЕЗЛИ ЯГЕРМАЙСТЕР! ТЕПЕРЬ ВЫ МОЖЕТЕ ПРОПУСТИТЬ СТАКАНЧИК ВО ВРЕМЯ СТРИЖКИ</p>
-					<time datetime="2018-01-11">11 января</time>
-				</li>
-				<li class="news-item">
-					<p>В НАШЕЙ КОМАНДЕ ПОПОЛНЕНИЕ, БОРИС «БРИТВА» СТРИГУНЕЦ, ОБЛАДAТЕЛЬ МНОЖЕСТВА ТИТУЛОВ И НАГРАД ПОПОЛНИЛ НАШИ
-						СТРОЙНЫЕ РЯДЫ</p>
-					<time datetime="2018-01-11">11 января</time>
-				</li>
-			</ul>
-			<a href="pages/news.html" class="button"></a>
-		</section>
+		<div class="index-columns">
+			<section class="news">
+				<h2>Новости</h2>
+				<ul class="news-list">
+					<li class="news-item">
+						<p>НАМ НАКОНЕЦ ЗАВЕЗЛИ ЯГЕРМАЙСТЕР! ТЕПЕРЬ ВЫ МОЖЕТЕ ПРОПУСТИТЬ СТАКАНЧИК ВО ВРЕМЯ СТРИЖКИ</p>
+						<time datetime="2018-01-11">11 января</time>
+					</li>
+					<li class="news-item">
+						<p>В НАШЕЙ КОМАНДЕ ПОПОЛНЕНИЕ, БОРИС «БРИТВА» СТРИГУНЕЦ, ОБЛАДAТЕЛЬ МНОЖЕСТВА ТИТУЛОВ И НАГРАД ПОПОЛНИЛ НАШИ
+							СТРОЙНЫЕ РЯДЫ</p>
+						<time datetime="2018-01-11">11 января</time>
+					</li>
+				</ul>
+				<a href="pages/news.html" class="button"></a>
+			</section>
 
-		<section class="gallery">
-			<h2>Фотогалерея</h2>
-			<figure class="gallery-content">
-				<a href="#"><img src="img/studio.jpg" width="286" height="164" alt="Интерьер"></a>
-			</figure>
-			<span class="button gallery-button gallery-button-back">Назад</span>
-			<span class="button gallery-button gallery-button-next">Вперед</span>
-		</section>
+			<section class="gallery">
+				<h2>Фотогалерея</h2>
+				<figure class="gallery-content">
+					<a href="#"><img src="img/studio.jpg" width="286" height="164" alt="Интерьер"></a>
+				</figure>
+				<span class="button gallery-button gallery-button-back">Назад</span>
+				<span class="button gallery-button gallery-button-next">Вперед</span>
+			</section>
+		</div>
 
-		<section class="contacts">
-			<h2>Контактная информация</h2>
-			<p>
-				Барбершоп "Бородинский"<br>
-				Адрес: г. Санкт-петербург, Б. Конюшенная, д. 19<br>
-				Телефон: 7 940 55 02
-			</p>
-			<p>
-				Время работа:<br>
-				Пн-пт: с 10 до 22<br>
-				Сб-вс: с 10 до 19
-			</p>
-			<a href="map.html" class="button">Как проехать</a>
-			<a href="contacts.html" class="button">Обратная связь</a>
-		</section>
+		<div class="index-columns">
+			<section class="contacts">
+				<h2>Контактная информация</h2>
+				<p>
+					Барбершоп "Бородинский"<br>
+					Адрес: г. Санкт-петербург, Б. Конюшенная, д. 19<br>
+					Телефон: 7 940 55 02
+				</p>
+				<p>
+					Время работа:<br>
+					Пн-пт: с 10 до 22<br>
+					Сб-вс: с 10 до 19
+				</p>
+				<a href="map.html" class="button">Как проехать</a>
+				<a href="contacts.html" class="button">Обратная связь</a>
+			</section>
 
-		<section class="appointment">
-			<h2>Записаться</h2>
-			<p class="appointment-info">Укажите желаемую дату и время и мы свяжемся с вами для подтверждения брони</p>
-			<!-- TODO сделать форму -->
-		</section>
+			<section class="appointment">
+				<h2>Записаться</h2>
+				<p class="appointment-info">Укажите желаемую дату и время и мы свяжемся с вами для подтверждения брони</p>
+				<!-- TODO сделать форму -->
+			</section>
+		</div>
 
 	</main>
 
@@ -123,13 +127,34 @@
 	<section class="modal modal-login">
 		<h2>Личный кабинет</h2>
 		<p>Введите свой логин и пароль</p>
-		<!-- TODO вход -->
-		<span class="modal-close">x</span>
+		<form class="login-form" action="https://echo.htmlacademy.ru" method="post">
+			<p>
+				<label class="visually-hidden" for="user-login">Логин</label>
+				<input class="login-icon-user" type="text" placeholder="Логин" id="user-login">
+			</p>
+			<p>
+				<label class="visually-hidden" for="user-password">Пароль</label>
+				<input class="login-icon-password" type="password" placeholder="Пароль" id="user-password">
+			</p>
+			<p class="login-password-info">
+				<label class="login-checkbox">
+					<input type="checkbox" name="remember" class="visually-hidden">
+					<span class="checkbox-indicator">
+						Запомнить меня
+					</span>
+				</label>
+				<a href="#" class="restore">Я забыл пароль!</a>
+			</p>
+			<button class="button" type="submit">Войти</button>
+		</form>
+		<button class="modal-close" type="button">Закрыть</button>
 	</section>
 
 	<section class="modal modal-map">
 		<h2 class="visually-hidden">Как до нас добраться</h2>
-		<!-- TODO карту -->
+		<p>
+			<img src="img/map.jpg" width="780" height="560" alt="Адрес компании: Большая Конюшенная 19, Санкт-петербург">
+		</p>
 		<span class="modal-close">x</span>
 	</section>
 
