@@ -1,3 +1,11 @@
+html {
+	box-sizing: border-box;
+}
+
+.content-box-component {
+	box-sizing: content-box;
+}
+
 body {
 	margin: 0;
 	padding: 0;
@@ -51,7 +59,7 @@ a {
 	line-height: 20px;
 	color: white;
 
-	background-color: black;
+	background-color: transparent;
 }
 
 .site-navigation,
@@ -230,11 +238,6 @@ a {
 	list-style: none;
 }
 
-.page-title {
-	font-size: 30px;
-	line-height: 42px;
-}
-
 .breadcrumbs a {
 	color: black;
 }
@@ -340,4 +343,224 @@ a {
 	color: black;
 
 	background-color: white;
+}
+
+/* 
+* Сетка 
+*/
+
+html,
+body {
+	min-width: 1122px;
+	min-height: 1750px;
+}
+
+.container {
+	width: 940px;
+	margin: 0 auto;
+	padding: 0 10px;
+}
+
+.main-header {
+	margin-bottom: 75px;
+}
+
+.inner-page .main-header {
+	margin-bottom: 50px;
+
+	background-color: black;
+}
+
+.main-navigation {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+
+	background-color: transparent;
+}
+
+.inner-page .main-navigation {
+	display: flex;
+	justify-content: flex-start;
+	flex-direction: row;
+}
+
+.inner-page .user-navigation {
+	margin-left: auto;
+}
+
+.main-header-logo {
+	order: 2;
+
+	width: 368px;
+	height: 353px;
+}
+
+.inner-page .main-header-logo {
+	order: 0;
+
+	width: 111px;
+	height: 24px;
+	padding: 23px 20px;
+}
+
+.main-navigation-wrapper {
+	width: 100%;
+	margin-bottom: 60px;
+
+	background-color: black;
+}
+
+.main-navigation-wrapper .container {
+	display: flex;
+	justify-content: space-between;
+}
+
+.site-navigation {
+	width: 620px;
+	margin: 0;
+	padding: 0;
+
+	list-style: none;
+}
+
+.user-navigation {
+	width: 140px;
+	margin: 0;
+	padding: 0;
+
+	list-style: none;
+}
+
+.features {
+	margin-bottom: 80px;
+}
+
+.features-list {
+	display: flex;
+	justify-content: space-between;
+	margin: 0;
+	padding: 0;
+
+	list-style: none;
+}
+
+.features-item {
+	width: 300px;
+}
+
+.index-columns {
+	display: flex;
+	justify-content: space-between;
+	padding: 50px 80px;
+	margin-bottom: 35px;
+}
+
+.news {
+	width: 380px;
+}
+
+.gallery {
+	width: 300px;
+}
+
+.contacts {
+	width: 380px;
+}
+
+.appointment {
+	width: 300px;
+}
+
+.breadcrumbs {
+	padding: 0;
+	margin: 0;
+	margin-bottom: 50px;
+}
+
+.catalog-columns {
+	display: flex;
+	justify-content: space-between;
+}
+
+.filters {
+	width: 180px;
+}
+
+.catalog {
+	width: 700px;
+}
+
+.catalog-list {
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: space-between;
+	padding: 0;
+	margin: 0;
+	margin-bottom: 25px;
+
+	list-style: none;
+}
+
+.catalog-item {
+	width: 220px;
+	margin-bottom: 20px;
+	margin-right: 20px;
+}
+
+.catalog-item:nth-child(3n) {
+	margin-right: 0;
+}
+
+.pagination-list {
+	padding: 0;
+	margin: 0;
+
+	list-style: none;
+}
+
+.product-photos {
+	width: 460px;
+}
+
+.product-info {
+	width: 390px;
+}
+
+.page-title {
+	margin: 0;
+	margin-bottom: 15px;
+	padding: 0;
+
+	font-size: 30px;
+	line-height: 42px;
+}
+
+.main-footer {
+	padding: 60px 0;
+	margin-top: 65px;
+}
+
+.inner-page .main-footer {
+	margin-top: 45px;
+}
+
+.main-footer .container {
+	display: flex;
+}
+
+.footer-contacts {
+	width: 320px;
+	margin: 0;
+	margin-right: 80px;
+}
+
+.footer-social {
+	width: 145px;
+}
+
+.footer-copyright {
+	width: 170px;
+	margin: 0;
+	margin-left: auto;
 }
