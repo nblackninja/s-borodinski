@@ -355,7 +355,7 @@ input[type="radio"].visually-hidden {
 
 .product-info ul {
 	padding: 0;
-	list-style: square inside url("../img/list-style.png")
+	list-style: square inside url("../img/list-style.png");
 }
 
 .breadcrumbs {
@@ -952,4 +952,96 @@ input[type="radio"]:checked+label span {
 
 .product-price {
 	margin-left: 0;
+}
+
+/* Цена */
+
+.main-title {
+	text-align: center;
+
+	font-size: 48px;
+	line-height: 48px;
+	overflow: hidden;
+
+	margin-bottom: 30px;
+}
+
+.main-title::after,
+.main-title::before {
+	content: "";
+
+	display: inline-block;
+	vertical-align: super;
+	box-sizing: border-box;
+	width: 100%;
+	height: 2px;
+
+	background-color: black;
+	border: solid #FFF;
+	border-width: 0 10px;
+}
+
+.main-title::before {
+	margin-left: -100%;
+}
+
+.main-title::after {
+	margin-right: -100%;
+}
+
+.block-price {
+	display: flex;
+	justify-content: space-between;
+	flex-wrap: wrap;
+}
+
+.block-price h2 {
+	font-size: 24px;
+	line-height: 30px;
+}
+
+.best-practice {
+	width: 240px;
+}
+
+.price-list {
+	width: 460px;
+}
+
+.about-us {
+	width: 370px;
+}
+
+.about-us-2 {
+	display: flex;
+	align-items: flex-end;
+	width: 460px;
+}
+
+.best-practice ul {
+	padding: 0;
+	list-style: square inside url("../img/list-style.png");
+}
+
+.best-practice ul li {
+	padding: 5px 0;
+}
+
+.block-price table {
+	border-collapse: collapse;
+	width: 100%;
+	border: 2px solid black;
+	table-layout: fixed;
+}
+
+.block-price td {
+	border: 2px solid black;
+	padding-left: 17px;
+	padding-top: 10px;
+	padding-bottom: 10px;
+}
+
+.block-price td:nth-child(2) {
+	text-align: center;
+	padding-left: 0;
 }
