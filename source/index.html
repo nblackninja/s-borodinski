@@ -146,7 +146,7 @@
 			<p class="footer-contacts">
 				Барбершоп "Бородинский"<br />
 				Адрес: г. Санкт-петербург, Б. Конюшенная, д. 19<br />
-				<a href="map.html">Как нас найти?</a><br />
+				<a class="map-link">Как нас найти?</a><br />
 				Телефон: 7 940 55 02
 			</p>
 			<div class="footer-social">
@@ -189,10 +189,10 @@
 		<p class="modal-description">Введите пожалуйста свой логин и пароль</p>
 		<form class="login-form" action="https://www.w3schools.com/action_page.php" method="post">
 			<p>
-				<input class="login-icon-user" type="text" placeholder="Логин" id="user-login" name="login" />
+				<input class="login-icon-user" type="text" placeholder="Логин" id="user-login" name="login" required />
 			</p>
 			<p>
-				<input class="login-icon-password" type="password" placeholder="Пароль" id="user-password" name="password" />
+				<input class="login-icon-password" type="password" placeholder="Пароль" id="user-password" name="password" required />
 			</p>
 			<p class="login-help">
 				<label class="login-checkbox">
@@ -211,8 +211,35 @@
 		<p>
 			<img src="img/map.jpg" width="780" height="560" alt="Адрес компании: Большая Конюшенная 19, Санкт-петербург" />
 		</p>
-		<span class="modal-close">x</span>
+		<button class="modal-close modal-close-map" type="button">Закрыть</button>
 	</section>
+
+	<script>
+		const link = document.querySelector(".login-link");
+		const popup = document.querySelector(".modal-login");
+		const popupMap = document.querySelector(".modal-map");
+		const close = document.querySelector(".modal-close");
+		const closeMap = document.querySelector(".modal-close-map");
+		const map = document.querySelector(".map-link");
+		link.addEventListener("click", function (evt) {
+			evt.preventDefault();
+			popup.classList.add("modal-show");
+		});
+		close.addEventListener("click", function (evt) {
+			evt.preventDefault();
+			popup.classList.remove("modal-show");
+		});
+		// map
+		map.addEventListener("click", function (evt) {
+			evt.preventDefault();
+			popupMap.classList.add("modal-show");
+		});
+		closeMap.addEventListener("click", function (evt) {
+			evt.preventDefault();
+			popupMap.classList.remove("modal-show");
+		});
+	</script>
+
 </body>
 
 </html>
