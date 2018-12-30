@@ -117,6 +117,31 @@ input[type="radio"].visually-hidden {
 	background-color: #242424;
 }
 
+.site-navigation-current {
+	position: relative;
+}
+
+.site-navigation-current a:not([href]) {
+	background-color: black;
+}
+
+.site-navigation-current a:not[href] {
+	background-color: black;
+}
+
+.site-navigation-current::after {
+	content: "";
+
+	position: absolute;
+	right: 20px;
+	bottom: 0;
+	left: 20px;
+
+	height: 5px;
+
+	background-color: white;
+}
+
 .features-list {
 	list-style: none;
 }
