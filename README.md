@@ -1,4 +1,6 @@
-# Barbeshop Borodinski
+# Сайт для барбершопа Бородинский
+
+![Сайт для барбершопа Бородинский](https://user-images.githubusercontent.com/36636599/145901156-b0398fb0-c260-449b-997d-9aef1d50f0d2.jpg)
 
 ### О сайте
 
